@@ -73,6 +73,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Conexión.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Data\DUsuario.cs" />
     <Compile Include="View\AnimalZoneForms\frmAnimalCRUD.cs">
       <SubType>Form</SubType>
     </Compile>

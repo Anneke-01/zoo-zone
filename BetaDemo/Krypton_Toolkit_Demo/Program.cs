@@ -17,6 +17,7 @@ namespace Krypton_Toolkit_Demo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+            
         }
     }
 }
