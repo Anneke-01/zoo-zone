@@ -10,8 +10,8 @@ namespace Krypton_Toolkit_Demo.Controller
 {
     class Conexión
     {
-        //string cadena = "Server=tcp:oursqlserver2022.database.windows.net,1433;Initial Catalog=ZooZone;Persist Security Info=False;User ID=azureuser;Password=ZooZone#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        public static string cadena = "Data Source=.;Initial Catalog=ZooZone;user=sa;password=123";
+        public static string cadena = "Server=tcp:oursqlserver2022.database.windows.net,1433;Initial Catalog=ZooZone;Persist Security Info=False;User ID=azureuser;Password=ZooZone#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        //public static string cadena = "Data Source=.;Initial Catalog=ZooZone;user=sa;password=123";
         public SqlConnection conectarbd = new SqlConnection(cadena);
 
         
@@ -20,7 +20,7 @@ namespace Krypton_Toolkit_Demo.Controller
             try
             {
                 conectarbd.Open();
-                Console.WriteLine("si se pudo");
+                Console.WriteLine("Conexion con el servidor exitosa");
 
             }
             catch (Exception ex)

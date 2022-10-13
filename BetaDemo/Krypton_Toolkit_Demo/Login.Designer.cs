@@ -129,7 +129,7 @@
             this.btnLogin.StateTracking.Border.Width = 1;
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Values.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // kryptonPalette1
             // 
@@ -299,7 +299,7 @@
             // 
             this.txtUser.Location = new System.Drawing.Point(32, 202);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(292, 32);
+            this.txtUser.Size = new System.Drawing.Size(292, 31);
             this.txtUser.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtUser.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtUser.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -368,7 +368,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zoo Zone - v14.9.22";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
