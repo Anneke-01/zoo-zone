@@ -78,6 +78,7 @@
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\DBoleto.cs" />
     <Compile Include="Data\DUsuario.cs" />
+    <Compile Include="Data\DVeterinario.cs" />
     <Compile Include="View\AnimalZoneForms\frmAnimalCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
