@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using Krypton_Toolkit_Demo.Controller;
 
 namespace Krypton_Toolkit_Demo.Data
 {
@@ -35,7 +36,7 @@ namespace Krypton_Toolkit_Demo.Data
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "MostrarBoleto";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.CommandType = CommandType.TableDirect;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(dtBoletos);
@@ -44,9 +45,36 @@ namespace Krypton_Toolkit_Demo.Data
             catch (Exception)
             {
                 dtBoletos = null;
-                throw;
             }
             return dtBoletos;
+        }
+
+        public string Insertar(DBoleto boleto)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexión.cadena;
+                SqlCon.Open();
+                //Establecer el comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "AgregarBoleto";
+                SqlCmd.CommandType = CommandType.TableDirect;
+
+                //Parámetros del procedimiento
+                SqlParameter CantidadNiños = new SqlParameter();
+                CantidadNiños.SqlDbType = SqlDbType.
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            return rpta;
         }
 
     }
