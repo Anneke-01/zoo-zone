@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CBoleto.cs" />
     <Compile Include="Controller\Conexión.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\DBoleto.cs" />

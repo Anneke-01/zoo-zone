@@ -55,6 +55,7 @@ namespace Krypton_Toolkit_Demo
                 MessageBox.Show("Error al validar usuarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnSalesZone_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmSalesZone());
