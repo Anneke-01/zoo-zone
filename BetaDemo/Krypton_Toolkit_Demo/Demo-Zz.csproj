@@ -328,6 +328,7 @@
     <None Include="Resources\Zoo-rafiki.png" />
     <None Include="Resources\icons8-search-ios-16-70.png" />
     <None Include="Resources\trashCube.png" />
+    <None Include="Resources\exit-icon.png" />
     <Content Include="ZooZone_Ico.ico" />
   </ItemGroup>
   <ItemGroup>

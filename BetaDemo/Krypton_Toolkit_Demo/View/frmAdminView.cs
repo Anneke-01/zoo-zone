@@ -20,13 +20,40 @@ namespace Krypton_Toolkit_Demo
         {
             InitializeComponent();
             CustomizeDesign();
+            ComprobacionUsers();
         }
 
-        private void pbGitHub_Click(object sender, EventArgs e)
+        private void ComprobacionUsers()
         {
-            //Launch browser to GitHub Project
-            System.Diagnostics.Process.Start("https://github.com/Anneke-01/zoo-zone");
-            MessageBox.Show("You will be redirected to the GitHub website");
+            string users = "";
+            if (users == "Admin")
+            {
+                //Todos los botones activados
+            }
+            else if (users == "Vendedor")
+            {
+                btnAnimal.Visible = false;
+                btnComida.Visible = false;
+                btnEmpleado.Visible = false;
+                btnSalud.Visible = false;
+                
+            }
+            else if (users == "Veterinario")
+            {
+                btnEmpleado.Visible = false;
+                btnComida.Visible = false;
+                btnTours.Visible = false;
+            }
+            else if (users == "Cuidador")
+            {
+                btnEmpleado.Visible = false;
+                btnEmpleado.Visible = false;
+                btnTours.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Error al validar usuarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnSalesZone_Click(object sender, EventArgs e)
         {
@@ -149,6 +176,18 @@ namespace Krypton_Toolkit_Demo
         private void btnComida_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmFoodZone());
+        }
+
+        private void btnApoyaProyecto_Click(object sender, EventArgs e)
+        {
+            //Launch browser to GitHub Project
+            System.Diagnostics.Process.Start("https://github.com/Anneke-01/zoo-zone");
+            MessageBox.Show("You will be redirected to the GitHub website");
+        }
+
+        private void picbGitHub_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

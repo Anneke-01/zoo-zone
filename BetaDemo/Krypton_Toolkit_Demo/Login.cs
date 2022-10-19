@@ -26,29 +26,32 @@ namespace Krypton_Toolkit_Demo
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "" || txtPass.Text == "")
-            {
-                MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            frmAdminView frmAdmin = new frmAdminView();
+            frmAdmin.Show();
+            this.Hide();
+            //if (txtUser.Text == "" || txtPass.Text == "")
+            //{
+            //    MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
-            else
-            {
-                DataTable dato = CUsuario.Validar_Acceso(this.txtUser.Text, this.txtPass.Text);
-                if (dato.Rows.Count > 0)
-                {
-                    DataRow dr = dato.Rows[0];
-                    if (dr["Resultado"].ToString() == "Acceso Exitoso")
-                    {
-                        frmAdminView frmAdmin = new frmAdminView();
-                        frmAdmin.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            //}
+            //else
+            //{
+            //    DataTable dato = CUsuario.Validar_Acceso(this.txtUser.Text, this.txtPass.Text);
+            //    if (dato.Rows.Count > 0)
+            //    {
+            //        DataRow dr = dato.Rows[0];
+            //        if (dr["Resultado"].ToString() == "Acceso Exitoso")
+            //        {
+            //            frmAdminView frmAdmin = new frmAdminView();
+            //            frmAdmin.Show();
+            //            this.Hide();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+            //}
         }
     }
 }

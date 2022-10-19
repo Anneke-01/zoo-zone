@@ -66,7 +66,7 @@ namespace Krypton_Toolkit_Demo.Data
 
                 //Parámetros del procedimiento
                 SqlParameter CantidadNiños = new SqlParameter();
-                CantidadNiños.SqlDbType = SqlDbType.
+                CantidadNiños.SqlDbType = SqlDbType.Int;
             }
             catch (Exception ex)
             {
