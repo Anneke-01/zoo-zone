@@ -3,18 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Krypton_Toolkit_Demo.Data
 {
-    class DVeterinario
+    class DVendedor
     {
-        private int Id_Veterinario;
+        private int Id_Vendedor;
         private string PrimerNombre;
         private string SegundoNombre;
         private string PrimerApellido;
@@ -24,10 +21,8 @@ namespace Krypton_Toolkit_Demo.Data
         private string Sexo;
         private string FechaIngreso;
         private string Cedula;
-        private int AniosExperiencia;
-        private byte Estado;
 
-        public int id_Veterinario { get => Id_Veterinario; set => Id_Veterinario = value; }
+        public int id_Vendedor { get => Id_Vendedor; set => Id_Vendedor = value; }
         public string primerNombre { get => PrimerNombre; set => PrimerNombre = value; }
         public string segundoNombre { get => SegundoNombre; set => SegundoNombre = value; }
         public string primerApellido { get => PrimerApellido; set => PrimerApellido = value; }
@@ -36,13 +31,11 @@ namespace Krypton_Toolkit_Demo.Data
         public string telefono { get => Telefono; set => Telefono = value; }
         public string sexo { get => Sexo; set => Sexo = value; }
         public string fechaIngreso { get => FechaIngreso; set => FechaIngreso = value; }
-        public string cedula { get => Cedula;set => Cedula = value; }
-        public int aniosExperiencia { get => AniosExperiencia; set => AniosExperiencia = value; }
+        public string cedula { get => Cedula; set => Cedula = value; }
 
-
-        public DataTable MostrarVeterinario()
+        public DataTable MostrarVendedor()
         {
-            DataTable dtVeterinario = new DataTable("Veterinario");
+            DataTable dtVendedor = new DataTable("Vendedor");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
@@ -51,21 +44,21 @@ namespace Krypton_Toolkit_Demo.Data
                 // Creando un objeto SQLCommand que llamara el procedimiento de almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "MostrarVeterinario";
+                SqlCmd.CommandText = "MostrarVendedor";
                 SqlCmd.CommandType = CommandType.TableDirect;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(dtVeterinario);
+                SqlDat.Fill(dtVendedor);
             }
             catch (Exception)
             {
 
-                dtVeterinario = null;
+                dtVendedor = null;
             }
-            return dtVeterinario;
+            return dtVendedor;
         }
 
-        public string Insertar(DVeterinario veterinario)
+        public string Insertar(DVendedor vendedor)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -77,71 +70,72 @@ namespace Krypton_Toolkit_Demo.Data
                 //Establecer el comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "AgregarVeterinario";
+                SqlCmd.CommandText = "AgregarVendedor";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Parámetros del procedimiento de almacenado
+                SqlParameter Id_Vendedor = new SqlParameter();
+                Id_Vendedor.ParameterName = "@Id_vendedor";
+                Id_Vendedor.SqlDbType = SqlDbType.Int;
+                Id_Vendedor.Value = vendedor.id_Vendedor;
+                SqlCmd.Parameters.Add(Id_Vendedor);
+
                 SqlParameter PrimerNombre = new SqlParameter();
+                PrimerNombre.ParameterName = "@PrimerNombre";
                 PrimerNombre.SqlDbType = SqlDbType.VarChar;
-                PrimerNombre.Size = 20;
-                PrimerNombre.Value = veterinario.primerNombre;
+                PrimerNombre.Value = vendedor.primerNombre;
                 SqlCmd.Parameters.Add(PrimerNombre);
 
                 SqlParameter SegundoNombre = new SqlParameter();
                 SegundoNombre.SqlDbType = SqlDbType.VarChar;
-                SegundoNombre.Size = 20;
-                SegundoNombre.Value = veterinario.segundoNombre;
+                SegundoNombre.ParameterName = "@SegundoNombre";
+                SegundoNombre.Value = vendedor.segundoNombre;
                 SqlCmd.Parameters.Add(SegundoNombre);
 
                 SqlParameter PrimerApellido = new SqlParameter();
                 PrimerApellido.SqlDbType = SqlDbType.VarChar;
-                PrimerApellido.Size = 20;
-                PrimerApellido.Value = veterinario.primerApellido;
+                PrimerApellido.ParameterName = "@PrimerApellido";
+                PrimerApellido.Value = vendedor.primerApellido;
                 SqlCmd.Parameters.Add(PrimerApellido);
 
                 SqlParameter SegundoApellido = new SqlParameter();
                 SegundoApellido.SqlDbType = SqlDbType.VarChar;
-                SegundoApellido.Size = 20;
-                SegundoApellido.Value = veterinario.segundoApellido;
+                SegundoApellido.ParameterName = "@SegundoApellido";
+                SegundoApellido.Value = vendedor.segundoApellido;
                 SqlCmd.Parameters.Add(SegundoApellido);
 
                 SqlParameter Direccion = new SqlParameter();
                 Direccion.SqlDbType = SqlDbType.VarChar;
-                Direccion.Size = 40;
-                Direccion.Value = veterinario.direccion;
+                Direccion.ParameterName = "@Direccion";
+                Direccion.Value = vendedor.direccion;
                 SqlCmd.Parameters.Add(Direccion);
 
                 SqlParameter Telefono = new SqlParameter();
                 Telefono.SqlDbType = SqlDbType.VarChar;
-                Telefono.Size = 20;
-                Telefono.Value = veterinario.telefono;
+                Telefono.ParameterName = "@Telefono";
+                Telefono.Value = vendedor.telefono;
                 SqlCmd.Parameters.Add(Telefono);
 
                 SqlParameter Sexo = new SqlParameter();
                 Sexo.SqlDbType = SqlDbType.VarChar;
-                Sexo.Value = veterinario.sexo;
-                Sexo.Size = 12;
+                Sexo.ParameterName = "@Sexo";
+                Sexo.Value = vendedor.sexo;
                 SqlCmd.Parameters.Add(Sexo);
 
                 SqlParameter FechaIngreso = new SqlParameter();
                 FechaIngreso.SqlDbType = SqlDbType.VarChar;
-                FechaIngreso.Size = 20;
-                FechaIngreso.Value = veterinario.fechaIngreso;
+                FechaIngreso.ParameterName = "@FechaIngreso";
+                FechaIngreso.Value = vendedor.fechaIngreso;
                 SqlCmd.Parameters.Add(FechaIngreso);
 
                 SqlParameter Cedula = new SqlParameter();
                 Cedula.SqlDbType = SqlDbType.VarChar;
-                Cedula.Size = 20;
-                Cedula.Value = veterinario.cedula;
+                Cedula.ParameterName = "@Cedula";
+                Cedula.Value = vendedor.cedula;
                 SqlCmd.Parameters.Add(Cedula);
 
-                SqlParameter AniosExperiencia = new SqlParameter();
-                AniosExperiencia.SqlDbType = SqlDbType.Int;
-                AniosExperiencia.Value = veterinario.aniosExperiencia;
-                SqlCmd.Parameters.Add(AniosExperiencia);
-
-                    //Ejecutamos nuestro comando
-                    rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingreso el registro";
+                //Ejecutamos nuestro comando
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingreso el registro";
             }
             catch (Exception ex)
             {
@@ -152,10 +146,11 @@ namespace Krypton_Toolkit_Demo.Data
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
 
+
             return rpta;
         }
 
-        public string Actualizar(DVeterinario veterinario)
+        public string Actualizar(DVendedor vendedor)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -167,78 +162,69 @@ namespace Krypton_Toolkit_Demo.Data
                 //Establecer el comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "AgregarVeterinario";
+                SqlCmd.CommandText = "AgregarVendedor";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //Parámetros del procedimiento de almacenado
-                SqlParameter Id_Veterinario = new SqlParameter();
-                Id_Veterinario.ParameterName = "@Id_Veterinario";
-                Id_Veterinario.SqlDbType = SqlDbType.Int;
-                Id_Veterinario.Value = veterinario.id_Veterinario;
-                SqlCmd.Parameters.Add(Id_Veterinario);
+                SqlParameter Id_Vendedor = new SqlParameter();
+                Id_Vendedor.ParameterName = "@Id_Vendedor";
+                Id_Vendedor.SqlDbType = SqlDbType.Int;
+                Id_Vendedor.Value = vendedor.id_Vendedor;
+                SqlCmd.Parameters.Add(Id_Vendedor);
 
                 SqlParameter PrimerNombre = new SqlParameter();
                 PrimerNombre.ParameterName = "@PrimerNombre";
                 PrimerNombre.SqlDbType = SqlDbType.VarChar;
-                PrimerNombre.Value = veterinario.primerNombre;
+                PrimerNombre.Value = vendedor.primerNombre;
                 SqlCmd.Parameters.Add(PrimerNombre);
 
                 SqlParameter SegundoNombre = new SqlParameter();
                 SegundoNombre.SqlDbType = SqlDbType.VarChar;
                 SegundoNombre.ParameterName = "@SegundoNombre";
-                SegundoNombre.Value = veterinario.segundoNombre;
+                SegundoNombre.Value = vendedor.segundoNombre;
                 SqlCmd.Parameters.Add(SegundoNombre);
 
                 SqlParameter PrimerApellido = new SqlParameter();
                 PrimerApellido.SqlDbType = SqlDbType.VarChar;
                 PrimerApellido.ParameterName = "@PrimerApellido";
-                PrimerApellido.Value = veterinario.primerApellido;
+                PrimerApellido.Value = vendedor.primerApellido;
                 SqlCmd.Parameters.Add(PrimerApellido);
 
                 SqlParameter SegundoApellido = new SqlParameter();
                 SegundoApellido.SqlDbType = SqlDbType.VarChar;
                 SegundoApellido.ParameterName = "@SegundoApellido";
-                SegundoApellido.Value = veterinario.segundoApellido;
+                SegundoApellido.Value = vendedor.segundoApellido;
                 SqlCmd.Parameters.Add(SegundoApellido);
 
                 SqlParameter Direccion = new SqlParameter();
                 Direccion.SqlDbType = SqlDbType.VarChar;
                 Direccion.ParameterName = "@Direccion";
-                Direccion.Value = veterinario.direccion;
+                Direccion.Value = vendedor.direccion;
                 SqlCmd.Parameters.Add(Direccion);
 
                 SqlParameter Telefono = new SqlParameter();
                 Telefono.SqlDbType = SqlDbType.VarChar;
                 Telefono.ParameterName = "@Telefono";
-                Telefono.Value = veterinario.telefono;
+                Telefono.Value = vendedor.telefono;
                 SqlCmd.Parameters.Add(Telefono);
 
                 SqlParameter Sexo = new SqlParameter();
                 Sexo.SqlDbType = SqlDbType.VarChar;
                 Sexo.ParameterName = "@Sexo";
-                Sexo.Value = veterinario.sexo;
+                Sexo.Value = vendedor.sexo;
                 SqlCmd.Parameters.Add(Sexo);
 
                 SqlParameter FechaIngreso = new SqlParameter();
                 FechaIngreso.SqlDbType = SqlDbType.VarChar;
                 FechaIngreso.ParameterName = "@FechaIngreso";
-                FechaIngreso.Value = veterinario.fechaIngreso;
+                FechaIngreso.Value = vendedor.fechaIngreso;
                 SqlCmd.Parameters.Add(FechaIngreso);
 
                 SqlParameter Cedula = new SqlParameter();
                 Cedula.SqlDbType = SqlDbType.VarChar;
                 Cedula.ParameterName = "@Cedula";
-                Cedula.Value = veterinario.cedula;
+                Cedula.Value = vendedor.cedula;
                 SqlCmd.Parameters.Add(Cedula);
-
-                SqlParameter AniosExperiencia = new SqlParameter();
-                AniosExperiencia.SqlDbType = SqlDbType.Int;
-                AniosExperiencia.ParameterName = "@AniosExperiencia";
-                AniosExperiencia.Value = veterinario.aniosExperiencia;
-                SqlCmd.Parameters.Add(AniosExperiencia);
-
-                SqlParameter Estado = new SqlParameter();
-                Estado.SqlDbType = SqlDbType.Binary;
             }
             catch (Exception ex)
             {

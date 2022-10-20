@@ -18,8 +18,6 @@ namespace Krypton_Toolkit_Demo
         {
             InitializeComponent();
             btnOkCustomDate.Enabled = false;
-            string rpta = "";
-            rpta = CBoleto.MostrarBoleto
         }
 
         private void btnCustomDate_Click(object sender, EventArgs e)

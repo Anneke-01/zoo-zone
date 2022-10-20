@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Krypton_Toolkit_Demo.Controller
 {
-    class CVeterinario
+    class CVendedor
     {
-        public static DataTable MostrarVeterinario()
+        public static DataTable MostrarVendedor()
         {
-            return new DVeterinario().MostrarVeterinario();
+            return new DVendedor().MostrarVendedor();
         }
 
         public static string Insertar(string PrimerNombre, string SegundoNombre, string PrimerApellido, string SegundoApellido, string Direccion, string Telefono, string Sexo, string FechaIngreso, string Cedula, int AniosExperiencia, byte Estado)
         {
-            DVeterinario Obj = new DVeterinario();
+            DVendedor Obj = new DVendedor();
             Obj.primerNombre = PrimerNombre;
             Obj.segundoNombre = SegundoNombre;
             Obj.primerApellido = PrimerApellido;
@@ -27,14 +27,13 @@ namespace Krypton_Toolkit_Demo.Controller
             Obj.sexo = Sexo;
             Obj.fechaIngreso = FechaIngreso;
             Obj.cedula = Cedula;
-            Obj.aniosExperiencia = AniosExperiencia;
 
             return Obj.Insertar(Obj);
         }
 
         public static string Actualizar(string PrimerNombre, string SegundoNombre, string PrimerApellido, string SegundoApellido, string Direccion, string Telefono, string Sexo, string FechaIngreso, string Cedula, int AniosExperiencia, byte Estado)
         {
-            DVeterinario Obj = new DVeterinario();
+            DVendedor Obj = new DVendedor();
             Obj.primerNombre = PrimerNombre;
             Obj.segundoNombre = SegundoNombre;
             Obj.primerApellido = PrimerApellido;
@@ -44,7 +43,6 @@ namespace Krypton_Toolkit_Demo.Controller
             Obj.sexo = Sexo;
             Obj.fechaIngreso = FechaIngreso;
             Obj.cedula = Cedula;
-            Obj.aniosExperiencia = AniosExperiencia;
 
             return Obj.Actualizar(Obj);
         }
