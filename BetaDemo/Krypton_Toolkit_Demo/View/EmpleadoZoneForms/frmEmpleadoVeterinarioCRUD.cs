@@ -22,27 +22,15 @@ namespace Krypton_Toolkit_Demo.View.EmpleadoZoneForms
 
         private void btnGuardarVeterinario_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string rpta = "";
-            //    if (isUpdate)
-            //    {
-            //        if (String.IsNullOrWhiteSpace(txtPrimerNombre.Text) || String.IsNullOrWhiteSpace(txtSegundoNombre.Text) || String.IsNullOrWhiteSpace(txtSegundoApellido.Text) || String.IsNullOrWhiteSpace(txtCedula.Text) || String.IsNullOrWhiteSpace(txtAnioAntiguedad.Text) || String.IsNullOrWhiteSpace(txtTelefono.Text) || String.IsNullOrWhiteSpace(txtDireccion.Text));
-            //        {
-            //            //MessageBox.Show("Verificar que los datos de entrada no sean vacios", "Entrada de datos invalida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            //limpiar();
-            //        }
-            //        else
-            //        {
-            //            //rpta = CVeterinario.Insertar(txtPrimerNombre, txtSegundoNombre, txtSegundoApellido, txtCedula, txtAnioAntiguedad, txtTelefono, txtDireccion);
-            //        }
-            //    }
-            //}
-            //catch (Exception)
-            //{
+            try
+            {
 
-            //    throw;
-            //}
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         private void limpiar()
         {
