@@ -17,14 +17,6 @@ namespace Krypton_Toolkit_Demo
         public frmHome()
         {
             InitializeComponent();
-            btnOkCustomDate.Enabled = false;
-        }
-
-        private void btnCustomDate_Click(object sender, EventArgs e)
-        {
-            dtpStartDate.Enabled = true;
-            dtpEndDate.Enabled = true;
-            btnOkCustomDate.Enabled = true;
         }
     }
 }

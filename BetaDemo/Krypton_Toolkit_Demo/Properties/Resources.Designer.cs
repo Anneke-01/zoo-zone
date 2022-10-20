@@ -73,6 +73,16 @@ namespace Krypton_Toolkit_Demo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_Home {
+            get {
+                object obj = ResourceManager.GetObject("background-Home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_btn_demo {
             get {
                 object obj = ResourceManager.GetObject("close-btn-demo", resourceCulture);

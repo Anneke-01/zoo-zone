@@ -133,9 +133,6 @@
   <data name="sign-error-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign-error-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Usability testing-amico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Usability testing-amico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="max-btn-demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\max-btn-demo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +145,9 @@
   <data name="mc-yellw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mc-yellw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mc-green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mc-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +156,9 @@
   </data>
   <data name="Zoo-rafiki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zoo-rafiki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usability testing-amico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usability testing-amico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mc-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mc-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,7 @@
   <data name="icons8-search-ios-16-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-search-ios-16-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background-Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-Home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
