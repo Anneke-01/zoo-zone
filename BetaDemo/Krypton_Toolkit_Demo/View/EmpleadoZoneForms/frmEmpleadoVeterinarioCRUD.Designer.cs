@@ -275,6 +275,7 @@
             this.btnGuardarVeterinario.StateTracking.Border.Width = 1;
             this.btnGuardarVeterinario.TabIndex = 43;
             this.btnGuardarVeterinario.Values.Text = "Guardar";
+            this.btnGuardarVeterinario.Click += new System.EventHandler(this.btnGuardarVeterinario_Click);
             // 
             // txtCedula
             // 

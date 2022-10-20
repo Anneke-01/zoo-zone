@@ -74,11 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CBoleto.cs" />
+    <Compile Include="Controller\CCuidador.cs" />
     <Compile Include="Controller\Conexión.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Controller\CVendedor.cs" />
     <Compile Include="Controller\CVeterinario.cs" />
     <Compile Include="Data\DBoleto.cs" />
+    <Compile Include="Data\DCuidador.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\DVendedor.cs" />
     <Compile Include="Data\DVeterinario.cs" />

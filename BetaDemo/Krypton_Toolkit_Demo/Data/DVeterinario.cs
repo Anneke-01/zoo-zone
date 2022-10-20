@@ -25,7 +25,6 @@ namespace Krypton_Toolkit_Demo.Data
         private string FechaIngreso;
         private string Cedula;
         private int AniosExperiencia;
-        private byte Estado;
 
         public int id_Veterinario { get => Id_Veterinario; set => Id_Veterinario = value; }
         public string primerNombre { get => PrimerNombre; set => PrimerNombre = value; }
@@ -51,8 +50,8 @@ namespace Krypton_Toolkit_Demo.Data
                 // Creando un objeto SQLCommand que llamara el procedimiento de almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "MostrarVeterinario";
-                SqlCmd.CommandType = CommandType.TableDirect;
+                SqlCmd.CommandText = "Read_Veterinario";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(dtVeterinario);

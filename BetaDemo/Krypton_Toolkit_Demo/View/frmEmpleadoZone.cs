@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Krypton_Toolkit_Demo.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,11 @@ namespace Krypton_Toolkit_Demo.View
         public frmEmpleadoZone()
         {
             InitializeComponent();
+            this.dgvVeterinario.DataSource = CVeterinario.MostrarVeterinario();
+            this.dgvVeterinario.Columns[0].Visible = false;
+
+            this.dgvCuidador.DataSource = CCuidador.MostrarCuidador();
+            this.dgvCuidador.Columns[0].Visible = false;
         }
 
         private void btnAgregarVeterinario_Click(object sender, EventArgs e)

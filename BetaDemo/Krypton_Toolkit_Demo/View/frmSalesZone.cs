@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Krypton_Toolkit_Demo.Controller;
 using Krypton_Toolkit_Demo.SalesZoneForms;
 using System;
 using System.Runtime.InteropServices;
@@ -47,6 +48,8 @@ namespace Krypton_Toolkit_Demo
         public frmSalesZone()
         {
             InitializeComponent();
+            this.dataGridView1.DataSource = CVendedor.MostrarVendedor();
+            this.dataGridView1.Columns[0].Visible = false;
         }
 
         private void btnAddSalesM_Click(object sender, EventArgs e)

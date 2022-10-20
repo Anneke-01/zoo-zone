@@ -44,8 +44,8 @@ namespace Krypton_Toolkit_Demo.Data
                 // Creando un objeto SQLCommand que llamara el procedimiento de almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "MostrarVendedor";
-                SqlCmd.CommandType = CommandType.TableDirect;
+                SqlCmd.CommandText = "Read_Vendedor_ticket";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(dtVendedor);

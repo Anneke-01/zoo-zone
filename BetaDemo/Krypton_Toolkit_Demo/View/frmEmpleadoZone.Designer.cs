@@ -35,21 +35,21 @@
             this.btnActualizarCuidador = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearchCuidador = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCuidador = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEliminarVeterinario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAgregarVeterinario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnActualizarVeterinario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearchAnimals = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.dgvAnimals = new System.Windows.Forms.DataGridView();
+            this.dgvVeterinario = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnlEmpleadosPrimary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuidador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVeterinario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEmpleadosPrimary
@@ -60,14 +60,14 @@
             this.pnlEmpleadosPrimary.Controls.Add(this.btnActualizarCuidador);
             this.pnlEmpleadosPrimary.Controls.Add(this.pictureBox1);
             this.pnlEmpleadosPrimary.Controls.Add(this.txtSearchCuidador);
-            this.pnlEmpleadosPrimary.Controls.Add(this.dataGridView1);
+            this.pnlEmpleadosPrimary.Controls.Add(this.dgvCuidador);
             this.pnlEmpleadosPrimary.Controls.Add(this.label3);
             this.pnlEmpleadosPrimary.Controls.Add(this.btnEliminarVeterinario);
             this.pnlEmpleadosPrimary.Controls.Add(this.btnAgregarVeterinario);
             this.pnlEmpleadosPrimary.Controls.Add(this.btnActualizarVeterinario);
             this.pnlEmpleadosPrimary.Controls.Add(this.pbSearch);
             this.pnlEmpleadosPrimary.Controls.Add(this.txtSearchAnimals);
-            this.pnlEmpleadosPrimary.Controls.Add(this.dgvAnimals);
+            this.pnlEmpleadosPrimary.Controls.Add(this.dgvVeterinario);
             this.pnlEmpleadosPrimary.Controls.Add(this.label2);
             this.pnlEmpleadosPrimary.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmpleadosPrimary.Location = new System.Drawing.Point(0, 0);
@@ -280,13 +280,13 @@
             this.txtSearchCuidador.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtSearchCuidador.TabIndex = 30;
             // 
-            // dataGridView1
+            // dgvCuidador
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 403);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1018, 215);
-            this.dataGridView1.TabIndex = 27;
+            this.dgvCuidador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuidador.Location = new System.Drawing.Point(19, 403);
+            this.dgvCuidador.Name = "dgvCuidador";
+            this.dgvCuidador.Size = new System.Drawing.Size(1018, 215);
+            this.dgvCuidador.TabIndex = 27;
             // 
             // label3
             // 
@@ -504,13 +504,13 @@
             this.txtSearchAnimals.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txtSearchAnimals.TabIndex = 21;
             // 
-            // dgvAnimals
+            // dgvVeterinario
             // 
-            this.dgvAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnimals.Location = new System.Drawing.Point(18, 70);
-            this.dgvAnimals.Name = "dgvAnimals";
-            this.dgvAnimals.Size = new System.Drawing.Size(1018, 229);
-            this.dgvAnimals.TabIndex = 18;
+            this.dgvVeterinario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVeterinario.Location = new System.Drawing.Point(18, 70);
+            this.dgvVeterinario.Name = "dgvVeterinario";
+            this.dgvVeterinario.Size = new System.Drawing.Size(1018, 229);
+            this.dgvVeterinario.TabIndex = 18;
             // 
             // label2
             // 
@@ -641,9 +641,9 @@
             this.pnlEmpleadosPrimary.ResumeLayout(false);
             this.pnlEmpleadosPrimary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuidador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVeterinario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,14 +653,14 @@
         private System.Windows.Forms.Panel pnlEmpleadosPrimary;
         private System.Windows.Forms.PictureBox pbSearch;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearchAnimals;
-        private System.Windows.Forms.DataGridView dgvAnimals;
+        private System.Windows.Forms.DataGridView dgvVeterinario;
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnEliminarCuidador;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAgregarCuidador;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnActualizarCuidador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearchCuidador;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCuidador;
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnEliminarVeterinario;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAgregarVeterinario;
