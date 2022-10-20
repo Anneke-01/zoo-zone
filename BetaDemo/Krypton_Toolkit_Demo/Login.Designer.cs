@@ -368,6 +368,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zoo Zone - v14.9.22";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmLogin_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

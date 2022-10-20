@@ -14,6 +14,11 @@ namespace Krypton_Toolkit_Demo.Controller
         {
             return new DUsuario().Validar_Acceso(usuario, contraseña);
         }
+
+        public static DataTable Cambiar_Contrasena(int IdUsuario, string contrasena, string NuevaContrasena)
+        {
+            return new DUsuario().Cambiar_Contrasena(IdUsuario, contrasena, NuevaContrasena);
+        }
       
     }
 }

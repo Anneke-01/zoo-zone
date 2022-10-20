@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnlAnimalsPrimary = new System.Windows.Forms.Panel();
-            this.pbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearchAnimals = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbEspecie = new System.Windows.Forms.ComboBox();
@@ -40,9 +39,10 @@
             this.dgvAnimals = new System.Windows.Forms.DataGridView();
             this.btnUpdateAnimals = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbSearch = new System.Windows.Forms.PictureBox();
             this.pnlAnimalsPrimary.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -167,16 +167,6 @@
             this.pnlAnimalsPrimary.Name = "pnlAnimalsPrimary";
             this.pnlAnimalsPrimary.Size = new System.Drawing.Size(1048, 686);
             this.pnlAnimalsPrimary.TabIndex = 1;
-            // 
-            // pbSearch
-            // 
-            this.pbSearch.Image = global::Krypton_Toolkit_Demo.Properties.Resources.icons8_search_ios_16_70;
-            this.pbSearch.Location = new System.Drawing.Point(720, 25);
-            this.pbSearch.Name = "pbSearch";
-            this.pbSearch.Size = new System.Drawing.Size(30, 30);
-            this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSearch.TabIndex = 22;
-            this.pbSearch.TabStop = false;
             // 
             // txtSearchAnimals
             // 
@@ -411,6 +401,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Animales";
             // 
+            // pbSearch
+            // 
+            this.pbSearch.Image = global::Krypton_Toolkit_Demo.Properties.Resources.icons8_search_ios_16_70;
+            this.pbSearch.Location = new System.Drawing.Point(720, 25);
+            this.pbSearch.Name = "pbSearch";
+            this.pbSearch.Size = new System.Drawing.Size(30, 30);
+            this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSearch.TabIndex = 22;
+            this.pbSearch.TabStop = false;
+            // 
             // frmAnimalsZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,8 +424,8 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.pnlAnimalsPrimary.ResumeLayout(false);
             this.pnlAnimalsPrimary.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,5 +17,10 @@ namespace Krypton_Toolkit_Demo.View.EmpleadoZoneForms
         {
             InitializeComponent();
         }
+
+        private void txtPrimerNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

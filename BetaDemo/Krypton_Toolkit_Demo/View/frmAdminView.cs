@@ -26,11 +26,7 @@ namespace Krypton_Toolkit_Demo
         private void ComprobacionUsers()
         {
             string users = "";
-            if (users == "Admin")
-            {
-                //Todos los botones activados
-            }
-            else if (users == "Vendedor")
+            if (users == "Vendedor")
             {
                 btnAnimal.Visible = false;
                 btnComida.Visible = false;
@@ -52,7 +48,7 @@ namespace Krypton_Toolkit_Demo
             }
             else
             {
-                MessageBox.Show("Error al validar usuarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Error al validar usuarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
