@@ -37,8 +37,8 @@ namespace Krypton_Toolkit_Demo.Data
         public string sexo { get => Sexo; set => Sexo = value; }
         public string fechaIngreso { get => FechaIngreso; set => FechaIngreso = value; }
         public string cedula { get => Cedula;set => Cedula = value; }
-        private int aniosExperiencia { get => AniosExperiencia; set => AniosExperiencia = value; }
-        private byte estado { get => Estado; set => Estado = value; }
+        public int aniosExperiencia { get => AniosExperiencia; set => AniosExperiencia = value; }
+        public byte estado { get => Estado; set => Estado = value; }
 
 
         public DataTable MostrarVeterinario()

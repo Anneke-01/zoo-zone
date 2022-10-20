@@ -76,6 +76,7 @@
     <Compile Include="Controller\CBoleto.cs" />
     <Compile Include="Controller\Conexión.cs" />
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Controller\CVeterinario.cs" />
     <Compile Include="Data\DBoleto.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\DVeterinario.cs" />
