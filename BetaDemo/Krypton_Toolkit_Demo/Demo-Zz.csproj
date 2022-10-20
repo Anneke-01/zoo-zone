@@ -78,6 +78,7 @@
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Controller\CVendedor.cs" />
     <Compile Include="Controller\CVeterinario.cs" />
+    <Compile Include="Data\DProveedor.cs" />
     <Compile Include="Data\DBoleto.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\DVendedor.cs" />

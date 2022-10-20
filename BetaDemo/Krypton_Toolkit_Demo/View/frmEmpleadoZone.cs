@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Krypton_Toolkit_Demo.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -83,11 +83,13 @@ namespace Krypton_Toolkit_Demo.Data
                 SqlParameter PrimerNombre = new SqlParameter();
                 PrimerNombre.ParameterName = "@PrimerNombre";
                 PrimerNombre.SqlDbType = SqlDbType.VarChar;
+                PrimerNombre.Size = 20;
                 PrimerNombre.Value = vendedor.primerNombre;
                 SqlCmd.Parameters.Add(PrimerNombre);
 
                 SqlParameter SegundoNombre = new SqlParameter();
                 SegundoNombre.SqlDbType = SqlDbType.VarChar;
+                SegundoNombre.Size = 20;
                 SegundoNombre.ParameterName = "@SegundoNombre";
                 SegundoNombre.Value = vendedor.segundoNombre;
                 SqlCmd.Parameters.Add(SegundoNombre);
